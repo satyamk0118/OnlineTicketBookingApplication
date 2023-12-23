@@ -4,4 +4,6 @@ import com.example.OnlineTicketBookingApplication.model.Movie;
 import org.springframework.data.repository.CrudRepository;
 
 public interface MovieRepository extends CrudRepository<Movie, Integer> {
+
+    public Movie findById(int movieId);
 }

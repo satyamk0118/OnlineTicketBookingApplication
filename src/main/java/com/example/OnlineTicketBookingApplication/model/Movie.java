@@ -1,9 +1,6 @@
 package com.example.OnlineTicketBookingApplication.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Movie {
@@ -17,6 +14,9 @@ public class Movie {
     private String description;
 
     private double length ;
+
+    @OneToOne(mappedBy = "movie")
+    private Event event;
 
     public Movie(int id, String name, String description, double length) {
         this.id = id;

@@ -1,18 +1,30 @@
 package com.example.OnlineTicketBookingApplication.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
-public class Show {
+@Entity
+public class Event {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "movie_id")
     private Movie movie;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "theater_id")
     private Theater theater;
+
+    @OneToOne(mappedBy = "event")
+    private Ticket ticket;
 
     private LocalDate time;
 
-    public Show(int id, Movie movie, Theater theater, LocalDate time) {
+    public Event(int id, Movie movie, Theater theater, LocalDate time) {
         this.id = id;
         this.movie = movie;
         this.theater = theater;
