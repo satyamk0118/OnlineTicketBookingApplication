@@ -1,8 +1,6 @@
 package com.example.OnlineTicketBookingApplication.controller;
 
-import com.example.OnlineTicketBookingApplication.model.Movie;
 import com.example.OnlineTicketBookingApplication.model.Ticket;
-import com.example.OnlineTicketBookingApplication.service.MovieService;
 import com.example.OnlineTicketBookingApplication.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

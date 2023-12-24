@@ -1,8 +1,6 @@
 package com.example.OnlineTicketBookingApplication.service;
 
-import com.example.OnlineTicketBookingApplication.dao.MovieRepository;
 import com.example.OnlineTicketBookingApplication.dao.TicketRepository;
-import com.example.OnlineTicketBookingApplication.model.Movie;
 import com.example.OnlineTicketBookingApplication.model.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
